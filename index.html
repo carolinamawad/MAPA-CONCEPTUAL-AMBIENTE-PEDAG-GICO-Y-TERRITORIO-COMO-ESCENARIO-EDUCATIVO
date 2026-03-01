@@ -8,87 +8,18 @@
 
 body{
 margin:0;
-font-family: Arial;
-background: linear-gradient(to bottom,#e6f0f8,#ffffff);
-}
-
-.title{
-text-align:center;
-font-size:32px;
-font-weight:bold;
-color:#2a66b0;
-margin-top:30px;
-}
-
-.container{
-position:relative;
-width:1200px;
-height:900px;
-margin:auto;
-}
-
-/* círculo */
-
-.circle{
-position:absolute;
-top:350px;
-left:520px;
-width:200px;
-height:200px;
-border-radius:50%;
-background: radial-gradient(circle,#3da4dc,#1b6ca8);
+background:#eef3f8;
 display:flex;
 justify-content:center;
 align-items:center;
-color:white;
-font-size:22px;
-font-weight:bold;
-text-align:center;
-}
-
-/* cajas */
-
-.box{
-position:absolute;
-width:260px;
-background:white;
-border-radius:15px;
-padding:15px;
-box-shadow:0 4px 15px rgba(0,0,0,0.2);
-}
-
-.territorio{top:100px; left:150px;}
-.espacio{top:100px; right:150px;}
-.dotacion{top:350px; right:100px;}
-.interacciones{bottom:120px; right:200px;}
-.cultura{bottom:120px; left:200px;}
-.intencionalidad{top:350px; left:100px;}
-
-.footer{
-position:absolute;
-bottom:20px;
-width:100%;
-text-align:center;
-font-weight:bold;
+height:100vh;
+font-family:Arial;
 }
 
 svg{
-position:absolute;
-top:0;
-left:0;
+max-width:1100px;
+height:auto;
 }
-
-.arrow{
-stroke-width:4;
-fill:none;
-}
-
-.orange{stroke:orange;}
-.yellow{stroke:gold;}
-.green{stroke:green;}
-.blue{stroke:#3da4dc;}
-.purple{stroke:purple;}
-.teal{stroke:teal;}
 
 </style>
 
@@ -96,85 +27,59 @@ fill:none;
 
 <body>
 
-<div class="title">
-MAPA CONCEPTUAL – AMBIENTE PEDAGÓGICO Y TERRITORIO COMO ESCENARIO EDUCATIVO
-</div>
+<svg viewBox="0 0 1100 800">
 
-<div class="container">
+<!-- fondo -->
+<rect width="1100" height="800" fill="#eef3f8"/>
 
-<div class="circle">
-AMBIENTE<br>PEDAGÓGICO
-</div>
+<!-- círculo central -->
+<defs>
+<radialGradient id="grad">
+<stop offset="0%" stop-color="#3da4dc"/>
+<stop offset="100%" stop-color="#1b6ca8"/>
+</radialGradient>
+</defs>
 
-<div class="box territorio">
-<b>Territorio</b><br>
-➤ Es el entorno donde viven y aprenden los niños<br>
-➤ Incluye cultura, comunidad y contexto social<br>
-➤ Permite construir identidad y sentido de pertenencia
-</div>
+<circle cx="550" cy="400" r="100" fill="url(#grad)"/>
 
-<div class="box espacio">
-<b>Espacio educativo</b><br>
-➤ Lugar físico donde ocurre el aprendizaje<br>
-➤ Puede ser aula, hogar, ludoteca, comunidad<br>
-➤ Debe ser seguro, organizado y estimulante
-</div>
+<text x="550" y="390" text-anchor="middle" fill="white" font-size="20" font-weight="bold">
+AMBIENTE
+</text>
 
-<div class="box dotacion">
-<b>Dotación</b><br>
-➤ Recursos y materiales educativos<br>
-➤ libros<br>
-➤ juguetes<br>
-➤ mobiliario
-</div>
+<text x="550" y="420" text-anchor="middle" fill="white" font-size="20" font-weight="bold">
+PEDAGÓGICO
+</text>
 
-<div class="box interacciones">
-<b>Interacciones</b><br>
-➤ Relaciones entre:<br>
-➤ niños<br>
-➤ docentes<br>
-➤ entorno
-</div>
+<!-- cajas -->
 
-<div class="box cultura">
-<b>Cultura y contexto</b><br>
-➤ costumbres<br>
-➤ tradiciones<br>
-➤ lengua<br>
-➤ comunidad
-</div>
+<rect x="100" y="100" width="250" height="120" rx="15" fill="white"/>
+<text x="120" y="130" font-size="16" font-weight="bold">Territorio</text>
 
-<div class="box intencionalidad">
-<b>Intencionalidad pedagógica</b><br>
-➤ planificación docente<br>
-➤ objetivos<br>
-➤ actividades<br>
-➤ experiencias
-</div>
+<rect x="750" y="100" width="250" height="120" rx="15" fill="white"/>
+<text x="770" y="130" font-size="16" font-weight="bold">Espacio educativo</text>
 
-<!-- FLECHAS SVG -->
+<rect x="750" y="350" width="250" height="120" rx="15" fill="white"/>
+<text x="770" y="380" font-size="16" font-weight="bold">Dotación</text>
 
-<svg width="1200" height="900">
+<rect x="750" y="600" width="250" height="120" rx="15" fill="white"/>
+<text x="770" y="630" font-size="16" font-weight="bold">Interacciones</text>
 
-<path d="M350,220 Q500,320 520,350" class="arrow orange"/>
-<path d="M850,220 Q700,320 720,350" class="arrow yellow"/>
-<path d="M900,450 Q750,450 720,450" class="arrow green"/>
-<path d="M800,700 Q700,550 650,520" class="arrow purple"/>
-<path d="M400,700 Q500,550 580,520" class="arrow orange"/>
-<path d="M300,450 Q450,450 520,450" class="arrow teal"/>
+<rect x="100" y="600" width="250" height="120" rx="15" fill="white"/>
+<text x="120" y="630" font-size="16" font-weight="bold">Cultura y contexto</text>
+
+<rect x="100" y="350" width="250" height="120" rx="15" fill="white"/>
+<text x="120" y="380" font-size="16" font-weight="bold">Intencionalidad pedagógica</text>
+
+<!-- flechas -->
+
+<line x1="350" y1="160" x2="470" y2="320" stroke="orange" stroke-width="4"/>
+<line x1="750" y1="160" x2="630" y2="320" stroke="gold" stroke-width="4"/>
+<line x1="750" y1="410" x2="650" y2="400" stroke="green" stroke-width="4"/>
+<line x1="750" y1="650" x2="630" y2="480" stroke="purple" stroke-width="4"/>
+<line x1="350" y1="650" x2="470" y2="480" stroke="orange" stroke-width="4"/>
+<line x1="350" y1="410" x2="470" y2="400" stroke="teal" stroke-width="4"/>
 
 </svg>
 
-<div class="footer">
-El ambiente pedagógico es el tejido que integra el territorio, el espacio, la dotación, las interacciones y la cultura.
-</div>
-
-</div>
-
 </body>
 </html>
-
-
-
-
-
