@@ -8,16 +8,16 @@
 
 body{
 margin:0;
-font-family: Arial, sans-serif;
-background: linear-gradient(to bottom,#dfe9f3,#ffffff);
+font-family: Arial;
+background: linear-gradient(to bottom,#e6f0f8,#ffffff);
 }
 
-.header{
+.title{
 text-align:center;
 font-size:32px;
 font-weight:bold;
 color:#2a66b0;
-padding:30px;
+margin-top:30px;
 }
 
 .container{
@@ -27,108 +27,76 @@ height:900px;
 margin:auto;
 }
 
-/* círculo central */
+/* círculo */
 
 .circle{
 position:absolute;
-top:320px;
-left:500px;
-width:240px;
-height:240px;
+top:350px;
+left:520px;
+width:200px;
+height:200px;
 border-radius:50%;
-background: radial-gradient(circle,#3aa0d8,#1e6fa8);
+background: radial-gradient(circle,#3da4dc,#1b6ca8);
 display:flex;
 justify-content:center;
 align-items:center;
 color:white;
-font-size:24px;
+font-size:22px;
 font-weight:bold;
 text-align:center;
-box-shadow:0 0 20px rgba(0,0,0,0.2);
 }
 
 /* cajas */
 
 .box{
 position:absolute;
-width:280px;
+width:260px;
 background:white;
-padding:15px;
 border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
+padding:15px;
+box-shadow:0 4px 15px rgba(0,0,0,0.2);
 }
 
-.title{
-font-size:20px;
-font-weight:bold;
-margin-bottom:10px;
-}
-
-/* posiciones */
-
-.territorio{
-top:80px;
-left:120px;
-border-top:6px solid orange;
-}
-
-.espacio{
-top:80px;
-right:120px;
-border-top:6px solid gold;
-}
-
-.dotacion{
-top:350px;
-right:80px;
-border-top:6px solid green;
-}
-
-.interacciones{
-bottom:120px;
-right:150px;
-border-top:6px solid purple;
-}
-
-.cultura{
-bottom:120px;
-left:150px;
-border-top:6px solid orange;
-}
-
-.intencionalidad{
-top:350px;
-left:80px;
-border-top:6px solid teal;
-}
-
-/* flechas */
-
-.arrow{
-position:absolute;
-width:200px;
-height:2px;
-background:black;
-}
-
-/* footer */
+.territorio{top:100px; left:150px;}
+.espacio{top:100px; right:150px;}
+.dotacion{top:350px; right:100px;}
+.interacciones{bottom:120px; right:200px;}
+.cultura{bottom:120px; left:200px;}
+.intencionalidad{top:350px; left:100px;}
 
 .footer{
 position:absolute;
 bottom:20px;
 width:100%;
 text-align:center;
-font-size:18px;
-color:#333;
 font-weight:bold;
 }
 
+svg{
+position:absolute;
+top:0;
+left:0;
+}
+
+.arrow{
+stroke-width:4;
+fill:none;
+}
+
+.orange{stroke:orange;}
+.yellow{stroke:gold;}
+.green{stroke:green;}
+.blue{stroke:#3da4dc;}
+.purple{stroke:purple;}
+.teal{stroke:teal;}
+
 </style>
+
 </head>
 
 <body>
 
-<div class="header">
+<div class="title">
 MAPA CONCEPTUAL – AMBIENTE PEDAGÓGICO Y TERRITORIO COMO ESCENARIO EDUCATIVO
 </div>
 
@@ -139,62 +107,73 @@ AMBIENTE<br>PEDAGÓGICO
 </div>
 
 <div class="box territorio">
-<div class="title">Territorio</div>
+<b>Territorio</b><br>
 ➤ Es el entorno donde viven y aprenden los niños<br>
 ➤ Incluye cultura, comunidad y contexto social<br>
 ➤ Permite construir identidad y sentido de pertenencia
 </div>
 
 <div class="box espacio">
-<div class="title">Espacio educativo</div>
+<b>Espacio educativo</b><br>
 ➤ Lugar físico donde ocurre el aprendizaje<br>
 ➤ Puede ser aula, hogar, ludoteca, comunidad<br>
 ➤ Debe ser seguro, organizado y estimulante
 </div>
 
 <div class="box dotacion">
-<div class="title">Dotación</div>
+<b>Dotación</b><br>
 ➤ Recursos y materiales educativos<br>
-➤ Ejemplos:<br>
-• libros<br>
-• juguetes<br>
-• mobiliario
+➤ libros<br>
+➤ juguetes<br>
+➤ mobiliario
 </div>
 
 <div class="box interacciones">
-<div class="title">Interacciones</div>
+<b>Interacciones</b><br>
 ➤ Relaciones entre:<br>
-• niños<br>
-• docentes<br>
-• entorno
+➤ niños<br>
+➤ docentes<br>
+➤ entorno
 </div>
 
 <div class="box cultura">
-<div class="title">Cultura y contexto</div>
-➤ Incluye:<br>
-• costumbres<br>
-• tradiciones<br>
-• lengua<br>
-• comunidad
+<b>Cultura y contexto</b><br>
+➤ costumbres<br>
+➤ tradiciones<br>
+➤ lengua<br>
+➤ comunidad
 </div>
 
 <div class="box intencionalidad">
-<div class="title">Intencionalidad pedagógica</div>
-➤ Es la planificación del docente<br>
-➤ Define:<br>
-• objetivos<br>
-• actividades<br>
-• experiencias
+<b>Intencionalidad pedagógica</b><br>
+➤ planificación docente<br>
+➤ objetivos<br>
+➤ actividades<br>
+➤ experiencias
 </div>
 
+<!-- FLECHAS SVG -->
+
+<svg width="1200" height="900">
+
+<path d="M350,220 Q500,320 520,350" class="arrow orange"/>
+<path d="M850,220 Q700,320 720,350" class="arrow yellow"/>
+<path d="M900,450 Q750,450 720,450" class="arrow green"/>
+<path d="M800,700 Q700,550 650,520" class="arrow purple"/>
+<path d="M400,700 Q500,550 580,520" class="arrow orange"/>
+<path d="M300,450 Q450,450 520,450" class="arrow teal"/>
+
+</svg>
+
 <div class="footer">
-El ambiente pedagógico es el tejido que integra el territorio, el espacio, la dotación, las interacciones y la cultura, permitiendo un aprendizaje significativo y contextualizado.
+El ambiente pedagógico es el tejido que integra el territorio, el espacio, la dotación, las interacciones y la cultura.
 </div>
 
 </div>
 
 </body>
 </html>
+
 
 
 
